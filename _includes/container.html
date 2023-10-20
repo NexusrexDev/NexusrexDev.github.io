@@ -1,0 +1,8 @@
+<p>{{include.title}}</p>
+<ul>
+    {% for link in {{include.content}} %}
+        <li>
+            <p>{{link.name}} | {{link.link}} | {{link.hint}}</p>
+        </li>
+    {% endfor %}
+</ul>
