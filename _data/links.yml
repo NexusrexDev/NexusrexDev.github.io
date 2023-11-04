@@ -1,42 +1,42 @@
 technical:
   - name: LinkedIn
     icon: dir
-    link: link1
+    link: https://www.linkedin.com/in/ahmed-abutahoun/
     hint: LinkedIn
   
   - name: Github
     icon: dir
-    link: link2
+    link: https://github.com/NexusrexDev
     hint: Github
 
   - name: Itch.io
     icon: dir
-    link: link3
+    link: https://nexusrexdev.itch.io/
     hint: Itch.io
 
 hobbies:
   - name: Bandcamp
     icon: dir
-    link: link1
+    link: https://nexusrex.bandcamp.com/
     hint: Bandcamp
   
   - name: GameDevCorner
     icon: dir
-    link: link2
+    link: https://nexusrexdev.github.io/gamedevcorner/
     hint: Gamedev blog
 
 social:
   - name: Twitter
     icon: dir
-    link: link1
+    link: https://twitter.com/NexusrexDev
     hint: Twitter / X
 
   - name: Facebook
     icon: dir
-    link: link2
+    link: https://www.facebook.com/NexusrexDev
     hint: Facebook
 
   - name: Instagram
     icon: dir
-    link: link3
+    link: https://www.instagram.com/NexusrexDev/
     hint: Instagram

@@ -1,8 +1,13 @@
-<p>{{include.title}}</p>
-<ul>
-    {% for link in {{include.content}} %}
-        <li>
-            <p>{{link.name}} | {{link.link}} | {{link.hint}}</p>
-        </li>
-    {% endfor %}
-</ul>
+<div id="container">
+
+    <p id = "separator"><span>{{include.title}}</span></p>
+    
+    <ul>
+        {% for link in {{include.content}} %}
+            <li>
+                <a href="{{link.link}}" title="{{link.hint}}"><p>{{link.name}}</p></a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>

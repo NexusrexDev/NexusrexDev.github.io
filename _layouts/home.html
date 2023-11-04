@@ -4,12 +4,24 @@
     {%- include head.html -%}
 
     <body>
-        <p>Avatar picture goes here</p>
-        <h1>My name goes here</h1> 
-        {{site.data.about.bio}}
-        <br>
-        {%- include container.html content=site.data.links.technical title="Technical" -%}
-        {%- include container.html content=site.data.links.hobbies title="Hobbies" -%}
-        {%- include container.html content=site.data.links.social title="Social Media" -%}
+
+        <div id="wrapper">
+
+            <div id="card">
+
+                <div class="inner">
+
+                    {%- include upper.html -%}
+                    
+                    {%- include container.html content=site.data.links.technical title="Technical" -%}
+                    {%- include container.html content=site.data.links.hobbies title="Hobbies" -%}
+                    {%- include container.html content=site.data.links.social title="Social Media" -%}
+
+                </div>
+                
+            </div>
+
+        </div>
+
     </body>
 </html>
