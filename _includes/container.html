@@ -5,7 +5,9 @@
     <ul>
         {% for link in {{include.content}} %}
             <li>
-                <a href="{{link.link}}" title="{{link.hint}}"><p>{{link.name}}</p></a>
+                <a href="{{link.link}}" title="{{link.hint}}" class="icon">
+                    <img src={{ link.icon | relative_url}} class="icon-image">
+                </a>
             </li>
         {% endfor %}
     </ul>
