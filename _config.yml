@@ -2,3 +2,7 @@
 title: Ahmed "Nexusrex" Abutahoun
 url: "https://nexusrexdev.github.io"
 relative_url: "/"
+
+collections:
+  projects:
+    output: true
