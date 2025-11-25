@@ -14,7 +14,7 @@ education:
     location: Helwan University - Faculty of Computers and Artificial Intelligence
     time: 2021 - 2025
   
-tools:
+skills:
   - engines
     - Godot
     - Unity
@@ -22,9 +22,8 @@ tools:
     - GDScript
     - C#
     - Python
-  - versioncontrol
+  - tools
     - Git/Github
-  - Software
     - Aseprite
     - Ableton
     - Famitracker
