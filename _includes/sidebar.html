@@ -1,0 +1,54 @@
+<div class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <h1>
+        {{ site.title }}
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+      <p>Currently developing at: <span class="sidebar-highlight">{{ site.data.experience.work[0].company }}</span> as <span class="sidebar-highlight">{{ site.data.experience.work[0].role }}</span></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      {% if page.title == "Home" %}
+        <a href="#" class="sidebar-nav-link">About</a>
+        <a href="#" class="sidebar-nav-link">Projects</a>
+        <a href="#" class="sidebar-nav-link">Experience</a>
+        <a href="#" class="sidebar-nav-link">Skill</a>
+      {% else %}
+        <a href="{{ site.baseurl }}" class="sidebar-nav-link">Return to Portfolio</a>
+      {% endif %}
+    </nav>
+
+    <div class="sidebar-footer">
+      <!-- Professional buttons -->
+      <div class="sidebar-buttons sidebar-buttons-professional">
+        {% for link in site.data.links.professional %}
+          <a href="{% if link.link contains 'http://' or link.link contains 'https://' or link.link contains 'assets/' %}{{ link.link }}{% else %}mailto:{{ link.link }}{% endif %}" class="sidebar-button sidebar-button-with-text" title="{{ link.hint }}">
+            <img src="{{ link.icon | relative_url }}" class="icon-image">
+            <span class="sidebar-button-text">{{ link.hint }}</span>
+          </a>
+        {% endfor %}
+      </div>
+
+      <!-- Technical buttons -->
+      <div class="sidebar-buttons sidebar-buttons-technical">
+        {% for link in site.data.links.technical %}
+          <a href="{{ link.link }}" class="sidebar-button" title="{{ link.hint }}">
+            <img src="{{ link.icon | relative_url }}" class="icon-image">
+          </a>
+        {% endfor %}
+      </div>
+
+      <!-- Social buttons -->
+      <div class="sidebar-buttons sidebar-buttons-social">
+        {% for link in site.data.links.social %}
+          <a href="{{ link.link }}" class="sidebar-button" title="{{ link.hint }}">
+            <img src="{{ link.icon | relative_url }}" class="icon-image">
+          </a>
+        {% endfor %}
+      </div>
+      <p>&copy; {{ site.time | date: '%Y' }} Ahmed Abutahoun. Built with Jekyll.</p>
+    </div>
+    
+  </div>
+</div>

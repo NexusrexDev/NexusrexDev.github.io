@@ -1,7 +1,9 @@
-# Site settings
+# Setup
 title: Ahmed "Nexusrex" Abutahoun
+tagline: 'Portfolio'
+description: Aspiring Game Programmer
 url: "https://nexusrexdev.github.io"
-relative_url: "/"
+baseurl: "/"
 
 collections:
   projects:
