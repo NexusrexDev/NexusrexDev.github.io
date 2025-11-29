@@ -22,8 +22,8 @@ education:
 skills:
   - name: Engines
     items:
-      - Godot
-      - Unity
+      - Godot Engine
+      - Unity Engine
   - name: Languages
     items:
       - GDScript
