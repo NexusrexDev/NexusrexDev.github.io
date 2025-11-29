@@ -1,0 +1,42 @@
+<section class="experience">
+  <h2 class="experience-title">Experience</h2>
+
+  {% for job in site.data.experience.work %}
+    <article class="experience-item">
+      <div class="experience-header">
+        <div class="experience-main">
+          <h3 class="experience-company">{{ job.company }}</h3>
+          <p class="experience-role">{{ job.role }}</p>
+        </div>
+        <div class="experience-meta">
+          {% if job.time %}
+            <span class="experience-pill">
+              <svg class="experience-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-400c8.8 0 16 7.2 16 16v112h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V128c0-8.8 7.2-16 16-16z"/>
+              </svg>
+              <span class="experience-pill-text">{{ job.time }}</span>
+            </span>
+          {% endif %}
+          {% if job.location %}
+            <span class="experience-pill">
+              <svg class="experience-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 272a80 80 0 1 1 0-160 80 80 0 1 1 0 160z"/>
+              </svg>
+              <span class="experience-pill-text">{{ job.location }}</span>
+            </span>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if job.info %}
+        <ul class="experience-info">
+          {% for line in job.info %}
+            <li>{{ line }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </article>
+  {% endfor %}
+</section>
+
+

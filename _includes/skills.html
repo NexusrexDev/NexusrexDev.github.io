@@ -1,0 +1,22 @@
+<section class="skills">
+  <h2 class="skills-title">Skills</h2>
+
+  <div class="skills-grid">
+    {% for group in site.data.experience.skills %}
+      <div class="skills-column">
+        <h3 class="skills-group-name">
+          <span class="skills-group-label">{{ group.name }}</span>
+        </h3>
+
+        {% if group.items %}
+          <ul class="skills-list">
+            {% for skill in group.items %}
+              <li class="skills-list-item">{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+

@@ -1,13 +1,18 @@
 # Structure:
-# role - text
-# company - text
-# time - text
-# info (optional) - array
+# work: array of jobs
+#   - role: text
+#   - company: text
+#   - time: text
+#   - location: text
+#   - info (optional): array of bullet points
+# education: array of education entries
+# skills: array of skill groups
 
 work:
   - role: Unity Developer Intern
     company: Genesis Creations
     time: 2025 - Present
+    location: Cairo - Egypt
 
 education:
   - degree: Bachelor's Degree
@@ -15,16 +20,20 @@ education:
     time: 2021 - 2025
   
 skills:
-  - engines
-    - Godot
-    - Unity
-  - languages
-    - GDScript
-    - C#
-    - Python
-  - tools
-    - Git/Github
-    - Aseprite
-    - Ableton
-    - Famitracker
-  
+  - name: Engines
+    items:
+      - Godot
+      - Unity
+  - name: Languages
+    items:
+      - GDScript
+      - C#
+      - Python
+  - name: Tools
+    items:
+      - Git/Github
+      - Aseprite
+      - Ableton
+      - Famitracker
+
+
