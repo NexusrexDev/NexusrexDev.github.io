@@ -362,7 +362,6 @@
   font-size: 0.85rem;
   color: #E5E7EB;
   background: rgba(15,23,42,0.95);
-  border: 1px solid rgba(148,163,184,0.06);
 }
 
 .project-pill i { font-size: 0.95rem; opacity: 0.95; }
@@ -494,3 +493,54 @@
 .carousel-indicator.active { background: rgba(255,255,255,0.95); }
 
 .carousel-btn i { font-size: 0.95rem; }
+
+/* Entrance animation utilities (mirrors _sass/_base.scss additions)
+   Added here so the site works immediately with the served CSS bundle
+*/
+.animate-item {
+  opacity: 0;
+  transform: translateY(12px) scale(0.995);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+  transition-delay: calc(var(--i, 0) * 0.08s);
+}
+
+.animate-item.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.animate-item--fast {
+  transition-delay: calc(var(--i, 0) * 0.06s);
+}
+
+/* Scale overshoot animation for avatar and badge */
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.8) translateY(8px);
+}
+
+.animate-scale.is-visible {
+  opacity: 1;
+  animation: overshootIn 640ms cubic-bezier(.175,.885,.32,1.275) both;
+  animation-delay: calc(var(--i, 0) * 0.08s);
+}
+
+@keyframes overshootIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(12px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08) translateY(0);
+  }
+
+  85% {
+    transform: scale(0.96);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

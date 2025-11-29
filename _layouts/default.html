@@ -11,5 +11,17 @@
       {{ content }}
     </div>
 
+    <script>
+      // Small helper to trigger staggered CSS animations on elements with .animate-item or .animate-scale
+      document.addEventListener('DOMContentLoaded', function () {
+        // wait a frame to ensure styles have applied
+        requestAnimationFrame(function () {
+          document.querySelectorAll('.animate-item, .animate-scale').forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        });
+      });
+    </script>
+
   </body>
 </html>

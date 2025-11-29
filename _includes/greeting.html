@@ -1,13 +1,13 @@
 <section class="hero card" id="about">
-  <div class="hero-content">
+  <div class="hero-content animate-item" style="--i: 0">
     <h1>Greetings, I'm Ahmed!</h1>
     <p class="hero-bio">{{ site.data.about.bio }}</p>
   </div>
   <div class="hero-avatar">
-    <div class="hero-avatar-frame circle circle--lg">
+    <div class="hero-avatar-frame circle circle--lg animate-scale" style="--i: 1">
       <img class="hero-avatar-main media-cover" src="{{ site.data.about.picture | relative_url }}" alt="{{ site.title | escape }} portrait">
     </div>
-    <img class="hero-avatar-badge" src="{{ 'assets/pixelavatar.png' | relative_url }}" alt="Pixel avatar badge">
+    <img class="hero-avatar-badge animate-scale" style="--i: 1.6" src="{{ 'assets/pixelavatar.png' | relative_url }}" alt="Pixel avatar badge">
   </div>
 </section>
 
