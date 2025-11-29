@@ -23,7 +23,7 @@
   flex-direction: column;
   transition: transform 0.18s ease;
 }
-.card--project:hover { transform: translateY(-6px); }
+.card--project:hover { transform: scale(1.1); }
 
 .part-dark {
     background: #0F172A
@@ -320,6 +320,7 @@
 }
 
 .project-link { color: inherit; text-decoration: none; display: block; height: 100%; }
+.project-link:hover { text-decoration: none; }
 
 .project-image img {
   display: block;
@@ -337,7 +338,7 @@
 .project-pitch { color: #CBD5F5; margin: 0 0 0.5rem 0; font-size: 0.95rem; }
 .project-meta { color: #94A3B8; margin: 0 0 0.5rem 0; font-size: 0.7rem; }
 
-.project-card:hover { transform: translateY(-6px); }
+.project-card:hover { transform: scale(1.1); }
 
 @media (max-width: 480px) {
   .project-image img { height: 120px; }
