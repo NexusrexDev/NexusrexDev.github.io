@@ -1,11 +1,11 @@
-<section class="hero">
+<section class="hero card">
   <div class="hero-content">
     <h1>Greetings, I'm Ahmed!</h1>
     <p class="hero-bio">{{ site.data.about.bio }}</p>
   </div>
   <div class="hero-avatar">
-    <div class="hero-avatar-frame">
-      <img class="hero-avatar-main" src="{{ site.data.about.picture | relative_url }}" alt="{{ site.title | escape }} portrait">
+    <div class="hero-avatar-frame circle circle--lg">
+      <img class="hero-avatar-main media-cover" src="{{ site.data.about.picture | relative_url }}" alt="{{ site.title | escape }} portrait">
     </div>
     <img class="hero-avatar-badge" src="{{ 'assets/pixelavatar.png' | relative_url }}" alt="Pixel avatar badge">
   </div>

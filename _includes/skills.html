@@ -1,17 +1,15 @@
 <section class="skills">
-  <h2 class="skills-title">Skills</h2>
+  <h2 class="section-title">Skills</h2>
 
   <div class="skills-grid">
     {% for group in site.data.experience.skills %}
-      <div class="skills-column">
-        <h3 class="skills-group-name">
-          <span class="skills-group-label">{{ group.name }}</span>
-        </h3>
+      <div class="skills-column card card--pad-sm">
+        <h3 class="skills-group-name">{{ group.name }}</h3>
 
         {% if group.items %}
           <ul class="skills-list">
             {% for skill in group.items %}
-              <li class="skills-list-item">{{ skill }}</li>
+              <li class="skills-list-item tag">{{ skill }}</li>
             {% endfor %}
           </ul>
         {% endif %}
