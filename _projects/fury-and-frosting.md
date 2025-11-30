@@ -11,7 +11,7 @@ platforms: ["Windows", "Linux"]
 role: "Solo Developer"
 status: "Released"
 
-screenshots: ["assets/project_assets/furyandfrosting/cover.png", "assets/project_assets/furyandfrosting/screenshot1.png", "assets/project_assets/furyandfrosting/screenshot2.png", "assets/project_assets/furyandfrosting/screenshot3.png"]
+screenshots: ["assets/project_assets/furyandfrosting/cover.png", "assets/project_assets/furyandfrosting/screenshot1.png", "assets/project_assets/furyandfrosting/screenshot2.png"]
 
 play_url: "https://nexusrexdev.itch.io/fury-and-frosting"
 code_url: "https://github.com/NexusrexDev/Fury-and-Frosting"
