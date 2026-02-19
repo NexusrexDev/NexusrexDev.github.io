@@ -8,11 +8,11 @@ layout: default
     <p class="blog-list__subheading">{{ page.description }}</p>
     {% endif %}
 
-    {% if site.posts.size == 0 %}
+    {% if paginator.posts.size == 0 %}
     <p class="blog-list__empty">No posts yet — check back soon!</p>
     {% else %}
     <div class="blog-list__feed">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         <article class="blog-card card animate-item" aria-label="{{ post.title }}">
             <a href="{{ post.url | relative_url }}" class="blog-card__link" tabindex="0">
 
@@ -45,5 +45,36 @@ layout: default
         </article>
         {% endfor %}
     </div>
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination" aria-label="Blog pagination">
+        {% if paginator.previous_page %}
+        <a class="pagination__link pagination__link--prev" href="{{ paginator.previous_page_path | relative_url }}"
+            aria-label="Previous page">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Newer
+        </a>
+        {% else %}
+        <span class="pagination__link pagination__link--prev pagination__link--disabled" aria-disabled="true">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Newer
+        </span>
+        {% endif %}
+
+        <span class="pagination__info">
+            Page {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+
+        {% if paginator.next_page %}
+        <a class="pagination__link pagination__link--next" href="{{ paginator.next_page_path | relative_url }}"
+            aria-label="Next page">
+            Older <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </a>
+        {% else %}
+        <span class="pagination__link pagination__link--next pagination__link--disabled" aria-disabled="true">
+            Older <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </span>
+        {% endif %}
+    </nav>
     {% endif %}
+    {% endif %}
+
 </section>

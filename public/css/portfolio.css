@@ -853,6 +853,52 @@
   gap: 1.25rem;
 }
 
+/* Pagination nav */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+}
+
+.pagination__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--color-accent-text);
+  text-decoration: none;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--color-accent-border);
+  background: var(--color-accent-bg);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.pagination__link:hover {
+  background: rgba(20, 105, 195, 0.50);
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination__link--disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination__info {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
 
 /* ============================================================
    BLOG CARD  (shared: blog-list page + latest-posts section)

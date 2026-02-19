@@ -4,9 +4,14 @@ tagline: 'Portfolio'
 description: Aspiring Game Programmer
 url: "https://nexusrexdev.github.io"
 baseurl: "" 
+permalink: /blog/:categories/:year/:month/:day/:title/
 
 # Blog & Excerpts
 show_excerpts: true
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 # Custom Collections
 collections:
@@ -18,6 +23,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-relative-links
+  - jekyll-paginate
 
 # Plugin Configurations
 relative_links:
