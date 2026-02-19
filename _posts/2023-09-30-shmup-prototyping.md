@@ -24,11 +24,11 @@ One fun tid-bit in Godot is **Custom Resources** which I've used to create *'pat
 The UI nodes were really quick to use as well, allowing me to mock up a very simple main menu and game over menu.
 
 ![Main menu]({{ "/assets/blog_assets/shmup-prototyping/proto_mainmenu.gif" | relative_url }})
-<br><sub>Main menu and options</sub>
+<sub>Main menu and options</sub>
 
 
 ![Game over]({{ "/assets/blog_assets/shmup-prototyping/proto_deathmenu.gif" | relative_url }})
-<br><sub>Game over menu</sub>
+<sub>Game over menu</sub>
 
 Making enemies went quite easily too! Creating a base class allowed me to turn the three phases previously mentioned in the *'Enemy Design in Shmups'* post to methods and attributes that are easily mixed and matched in the inspector. *(Save for the 'Action' attributes, these are written in a function per child-class)*
 I did create a list of the enemy ideas before testing them in the engine and changing some values.
@@ -38,7 +38,7 @@ I did create a list of the enemy ideas before testing them in the engine and cha
 And eventually, with a proper game loop, I got a few patterns down to test the enemies! *(although that they are quite lackluster in the game design department, but -cough- it's a prototype. -cough-)*
 
 ![Gameplay]({{ "/assets/blog_assets/shmup-prototyping/proto_gameplay.gif" | relative_url }})
-<br><sub>Gameplay sample</sub>
+<sub>Gameplay sample</sub>
 
 You can try the prototype in an HTML5 version on [my itch.io page](https://nexusrexdev.itch.io/protoshmup)! I'm mainly looking to see how the player character feels, if the loop itself is broken/bugged and anything along these lines before I can dip back into further explorations on art, game design or sound. So consider sharing your feedback, thoughts and ideas!
 

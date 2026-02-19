@@ -1,0 +1,44 @@
+{% assign latest = site.posts | limit: 2 %}
+{% if latest.size > 0 %}
+<section id="latest-posts" class="latest-posts">
+    <div class="latest-posts__header">
+        <h2 class="section-title animate-item animate-item--fast" style="--i: 0">Latest from the Blog</h2>
+        <a href="{{ '/blog/' | relative_url }}" class="latest-posts__see-all">
+            See all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="blog-list__feed">
+        {% for post in latest %}
+        <article class="blog-card card animate-item" style="--i: {{ forloop.index }};" aria-label="{{ post.title }}">
+            <a href="{{ post.url | relative_url }}" class="blog-card__link" tabindex="0">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        {% if post.categories and post.categories.size > 0 %}
+                        <span class="blog-card__category">
+                            <i class="fa-solid fa-tag" aria-hidden="true"></i>
+                            {{ post.categories | first }}
+                        </span>
+                        {% endif %}
+                        <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">
+                            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </time>
+                    </div>
+
+                    <h3 class="blog-card__title">{{ post.title }}</h3>
+
+                    {% if post.excerpt %}
+                    <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    {% endif %}
+
+                    <span class="blog-card__cta">
+                        Read post <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

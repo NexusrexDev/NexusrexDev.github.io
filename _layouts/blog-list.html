@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<section class="blog-list" id="blog-list">
+    <h1 class="blog-list__heading">{{ page.title | default: "Blog" }}</h1>
+    {% if page.description %}
+    <p class="blog-list__subheading">{{ page.description }}</p>
+    {% endif %}
+
+    {% if site.posts.size == 0 %}
+    <p class="blog-list__empty">No posts yet — check back soon!</p>
+    {% else %}
+    <div class="blog-list__feed">
+        {% for post in site.posts %}
+        <article class="blog-card card animate-item" style="--i: {{ forloop.index0 }};" aria-label="{{ post.title }}">
+            <a href="{{ post.url | relative_url }}" class="blog-card__link" tabindex="0">
+
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        {% if post.categories and post.categories.size > 0 %}
+                        <span class="blog-card__category">
+                            <i class="fa-solid fa-tag" aria-hidden="true"></i>
+                            {{ post.categories | first }}
+                        </span>
+                        {% endif %}
+                        <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">
+                            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </time>
+                    </div>
+
+                    <h2 class="blog-card__title">{{ post.title }}</h2>
+
+                    {% if post.excerpt %}
+                    <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    {% endif %}
+
+                    <span class="blog-card__cta">
+                        Read post <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>

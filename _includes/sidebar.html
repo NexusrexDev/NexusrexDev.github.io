@@ -5,17 +5,20 @@
         {{ site.title }}
       </h1>
       <p class="lead">{{ site.description }}</p>
-      <p style="margin-bottom: unset;">Currently developing at: <span class="sidebar-highlight">{{ site.data.experience.work[0].company }}</span> as <span class="sidebar-highlight">{{ site.data.experience.work[0].role }}</span></p>
+      <p style="margin-bottom: unset;">Currently developing at: <span class="sidebar-highlight">{{
+          site.data.experience.work[0].company }}</span> as <span class="sidebar-highlight">{{
+          site.data.experience.work[0].role }}</span></p>
     </div>
 
     <nav class="sidebar-nav">
       {% if page.title == "Home" %}
-        <a href="#about" class="sidebar-nav-link">About</a>
-        <a href="#projects" class="sidebar-nav-link">Projects</a>
-        <a href="#experience" class="sidebar-nav-link">Experience</a>
-        <a href="#skills" class="sidebar-nav-link">Skills</a>
+      <a href="#about" class="sidebar-nav-link">About</a>
+      <a href="#projects" class="sidebar-nav-link">Projects</a>
+      <a href="#latest-posts" class="sidebar-nav-link">Blog</a>
+      <a href="#experience" class="sidebar-nav-link">Experience</a>
+      <a href="#skills" class="sidebar-nav-link">Skills</a>
       {% else %}
-        <a href="/" class="sidebar-nav-link"><i class="fa-solid fa-arrow-left"></i> Return to Portfolio</a>
+      <a href="/" class="sidebar-nav-link"><i class="fa-solid fa-arrow-left"></i> Return to Portfolio</a>
       {% endif %}
     </nav>
 
@@ -23,32 +26,33 @@
       <!-- Professional buttons -->
       <div class="sidebar-buttons sidebar-buttons-professional">
         {% for link in site.data.links.professional %}
-          <a href="{% if link.link contains 'http://' or link.link contains 'https://' or link.link contains 'assets/' %}{{ link.link }}{% else %}mailto:{{ link.link }}{% endif %}" class="sidebar-button sidebar-button-with-text" title="{{ link.hint }}">
-            <img src="{{ link.icon | relative_url }}" class="icon-image">
-            <span class="sidebar-button-text">{{ link.hint }}</span>
-          </a>
+        <a href="{% if link.link contains 'http://' or link.link contains 'https://' or link.link contains 'assets/' %}{{ link.link }}{% else %}mailto:{{ link.link }}{% endif %}"
+          class="sidebar-button sidebar-button-with-text" title="{{ link.hint }}">
+          <img src="{{ link.icon | relative_url }}" class="icon-image">
+          <span class="sidebar-button-text">{{ link.hint }}</span>
+        </a>
         {% endfor %}
       </div>
 
       <!-- Technical buttons -->
       <div class="sidebar-buttons sidebar-buttons-technical">
         {% for link in site.data.links.technical %}
-          <a href="{{ link.link }}" class="sidebar-button" title="{{ link.hint }}">
-            <img src="{{ link.icon | relative_url }}" class="icon-image">
-          </a>
+        <a href="{{ link.link }}" class="sidebar-button" title="{{ link.hint }}">
+          <img src="{{ link.icon | relative_url }}" class="icon-image">
+        </a>
         {% endfor %}
       </div>
 
       <!-- Social buttons -->
       <div class="sidebar-buttons sidebar-buttons-social">
         {% for link in site.data.links.social %}
-          <a href="{{ link.link }}" class="sidebar-button" title="{{ link.hint }}">
-            <img src="{{ link.icon | relative_url }}" class="icon-image">
-          </a>
+        <a href="{{ link.link }}" class="sidebar-button" title="{{ link.hint }}">
+          <img src="{{ link.icon | relative_url }}" class="icon-image">
+        </a>
         {% endfor %}
       </div>
       <p>&copy; {{ site.time | date: '%Y' }} Ahmed Abutahoun. Built with Jekyll.</p>
     </div>
-    
+
   </div>
 </div>
