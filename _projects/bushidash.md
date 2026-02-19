@@ -23,5 +23,5 @@ Bushidash is a fast-paced arcade game where you control a samurai in a zen momen
 ### Achievements
 - Limited the mechanics to a single choice for an arcade-y, yet fun gameplay experience and designed the enemies around it.
 - Created the assets in Aseprite for a clear, bold and easily readable artstyle.
-- Composed the soundtrack using Famitracker and experimented with the Hirajoshi scale to create a gameplay theme influenced by Asian sounds.
+- Composed the soundtrack using Famitracker and experimented with the Hirajoshi scale to create a gameplay theme influenced by Asian music.
 - Delivered the game in 4 days in a web build.

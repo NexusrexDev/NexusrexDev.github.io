@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="theme-base-nex">
+<body class="theme-base-nex">
 
-    {% include sidebar.html %}
+  {% include sidebar.html %}
 
-    <div class="content container">
-      {{ content }}
-    </div>
+  <div class="content container">
+    {{ content }}
+  </div>
 
-    <script>
-      // Small helper to trigger staggered CSS animations on elements with .animate-item or .animate-scale
-      document.addEventListener('DOMContentLoaded', function () {
-        // wait a frame to ensure styles have applied
-        requestAnimationFrame(function () {
-          document.querySelectorAll('.animate-item, .animate-scale').forEach(function (el) {
-            el.classList.add('is-visible');
-          });
+  <script>
+    // Assign stagger indices and trigger entrance animations.
+    // --i is set automatically from each element's DOM position within its
+    // parent container, so templates never need to hardcode style="--i: N".
+    document.addEventListener('DOMContentLoaded', function () {
+      requestAnimationFrame(function () {
+        // Group animate-item / animate-scale elements by their direct parent,
+        // then assign --i = 1, 2, 3… within each group.
+        var seen = new Map();
+        document.querySelectorAll('.animate-item, .animate-scale').forEach(function (el) {
+          var parent = el.parentElement;
+          var idx = (seen.get(parent) || 0) + 1;
+          seen.set(parent, idx);
+          el.style.setProperty('--i', idx);
+          el.classList.add('is-visible');
         });
       });
-    </script>
+    });
+  </script>
 
-  </body>
+</body>
+
 </html>

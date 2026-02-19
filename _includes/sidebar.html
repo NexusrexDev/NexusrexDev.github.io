@@ -11,14 +11,18 @@
     </div>
 
     <nav class="sidebar-nav">
-      {% if page.title == "Home" %}
+      {% if page.layout == "home" %}
       <a href="#about" class="sidebar-nav-link">About</a>
       <a href="#projects" class="sidebar-nav-link">Projects</a>
       <a href="#latest-posts" class="sidebar-nav-link">Blog</a>
       <a href="#experience" class="sidebar-nav-link">Experience</a>
       <a href="#skills" class="sidebar-nav-link">Skills</a>
+      {% elsif page.layout == "post" %}
+      <a href="{{ '/blog/' | relative_url }}" class="sidebar-nav-link"><i class="fa-solid fa-arrow-left"></i> Return to
+        Blog List</a>
       {% else %}
-      <a href="/" class="sidebar-nav-link"><i class="fa-solid fa-arrow-left"></i> Return to Portfolio</a>
+      <a href="{{ '/' | relative_url }}" class="sidebar-nav-link"><i class="fa-solid fa-arrow-left"></i> Return to
+        Portfolio</a>
       {% endif %}
     </nav>
 

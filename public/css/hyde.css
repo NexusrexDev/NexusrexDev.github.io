@@ -50,13 +50,13 @@ html {
 
 /* Custom palette */
 body {
-  background-color: #0F172A;
-  color: #94A3B8;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .content,
 .content.container {
-  background-color: #0F172A;
+  background-color: var(--color-bg);
 }
 
 .content.container {
@@ -74,11 +74,11 @@ body {
 .content p,
 .content li,
 .content span {
-  color: #94A3B8;
+  color: var(--color-text);
 }
 
 .content a {
-  color: #7EB8F7;
+  color: var(--color-link);
 }
 
 .content h1,
@@ -87,7 +87,7 @@ body {
 .content h4,
 .content h5,
 .content h6 {
-  color: #F1F5F9;
+  color: var(--color-text-bright);
 }
 
 /* Portfolio-specific styles have been moved to `portfolio.css` */
@@ -459,7 +459,5 @@ a.sidebar-nav-item:focus {
   background-color: #0F379B;
 }
 
-.theme-base-nex .content a,
-.theme-base-nex .related-posts li a:hover {
-  color: #7EB8F7;
-}
+/* .theme-base-nex .content a colour is handled by the global .content a rule above.
+   Removed to eliminate specificity conflicts with scoped link rules in portfolio.css. */

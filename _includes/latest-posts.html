@@ -2,7 +2,7 @@
 {% if latest.size > 0 %}
 <section id="latest-posts" class="latest-posts">
     <div class="latest-posts__header">
-        <h2 class="section-title animate-item animate-item--fast" style="--i: 0">Latest from the Blog</h2>
+        <h2 class="section-title animate-item animate-item--fast">Latest from the Blog</h2>
         <a href="{{ '/blog/' | relative_url }}" class="latest-posts__see-all">
             See all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
@@ -10,7 +10,7 @@
 
     <div class="blog-list__feed">
         {% for post in latest %}
-        <article class="blog-card card animate-item" style="--i: {{ forloop.index }};" aria-label="{{ post.title }}">
+        <article class="blog-card card animate-item" aria-label="{{ post.title }}">
             <a href="{{ post.url | relative_url }}" class="blog-card__link" tabindex="0">
                 <div class="blog-card__body">
                     <div class="blog-card__meta">

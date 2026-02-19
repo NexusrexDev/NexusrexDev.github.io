@@ -13,7 +13,7 @@ layout: default
     {% else %}
     <div class="blog-list__feed">
         {% for post in site.posts %}
-        <article class="blog-card card animate-item" style="--i: {{ forloop.index0 }};" aria-label="{{ post.title }}">
+        <article class="blog-card card animate-item" aria-label="{{ post.title }}">
             <a href="{{ post.url | relative_url }}" class="blog-card__link" tabindex="0">
 
                 <div class="blog-card__body">
