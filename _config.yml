@@ -3,8 +3,29 @@ title: Ahmed "Nexusrex" Abutahoun
 tagline: 'Portfolio'
 description: Aspiring Game Programmer
 url: "https://nexusrexdev.github.io"
-baseurl: "/"
+baseurl: "" 
 
+# Blog & Excerpts
+show_excerpts: true
+
+# Custom Collections
 collections:
   projects:
     output: true
+
+# Build Settings & Plugins (Migrated from Blog)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+# Plugin Configurations
+relative_links:
+  enabled: true
+  collections: true
+
+# Exclusions to keep the build clean
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
