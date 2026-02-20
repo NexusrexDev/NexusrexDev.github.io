@@ -2,7 +2,14 @@
   <div class="hero-content animate-item">
     <h1>Greetings, I'm Ahmed!</h1>
     <p class="hero-bio">{{ site.data.about.bio }}</p>
+    <br>
+    <p class="hero-working-at"><i class="fa-solid fa-briefcase"></i> Currently developing at: <span
+        class="hero-working-at__highlight">{{ site.data.experience.work[0].company }}</span> as <span
+        class="hero-working-at__highlight">{{ site.data.experience.work[0].role }}</span></p>
   </div>
+
+
+
   <div class="hero-avatar">
     <div class="hero-avatar-frame circle circle--lg animate-scale" style="--i: 1">
       <img class="hero-avatar-main media-cover" src="{{ site.data.about.picture | relative_url }}"

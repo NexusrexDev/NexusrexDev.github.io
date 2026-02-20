@@ -105,7 +105,13 @@ body {
   padding: 2rem 1rem;
   color: rgba(255, 255, 255, .5);
   background-color: #202020;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+
+
 
 @media (min-width: 48em) {
   .sidebar {
@@ -251,6 +257,82 @@ body {
   gap: 1rem;
 }
 
+/* On mobile: hide the nav and footer — show only title & description */
+@media (max-width: 47.99em) {
+  .sidebar .container {
+    min-height: unset;
+  }
+
+  /* Layout: button pinned left, text centered across full bar */
+  .sidebar-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+  }
+
+  .sidebar-about-text {
+    text-align: center;
+  }
+
+  .sidebar-about h1 {
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .sidebar-about .lead {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  /* Toggle button — pinned to left of bar */
+  .sidebar-toggle {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.4rem;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+
+  /* Collapsed: nav and footer hidden */
+  .sidebar-nav,
+  .sidebar-footer {
+    display: none;
+  }
+
+  /* Expanded: show nav and footer */
+  .sidebar--expanded .sidebar-nav {
+    display: flex;
+  }
+
+  .sidebar--expanded .sidebar-footer {
+    display: block;
+  }
+}
+
+/* Hide toggle button on desktop — it's mobile-only */
+@media (min-width: 48em) {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+
 .sidebar-nav-link {
   display: flex;
   align-items: center;
@@ -260,7 +342,7 @@ body {
   font-family: "Fredoka", sans-serif;
   font-size: 0.9rem;
   opacity: 0.85;
-  transition: all 0.25s;
+  transition: color 0.25s, opacity 0.25s, gap 0.25s, transform 0.25s;
   text-decoration: none;
   text-align: center;
 }
@@ -269,9 +351,11 @@ body {
 .sidebar-nav-link:focus {
   color: #fff;
   opacity: 1;
+  gap: 0.75rem;
   transform: scale(1.05);
   text-decoration: none;
 }
+
 
 .sidebar-footer>p:last-child {
   margin-top: 0;
