@@ -17,10 +17,10 @@ play_url: "https://nexusrexdev.itch.io/geoshootria"
 code_url: "https://github.com/NexusrexDev/Geoshootria"
 ---
 
-### About the Project
+## About the Project
 Geoshootria is a fast-paced 2D shoot 'em up influenced by several classics from the genre, while keeping it accessible enough to new players.
 
-### Achievements
+## Achievements
 - Designed 2 stages with increasing difficulty and a challenging boss at the end of each stage.
 - Created a flexible spawner system for easier level pattern creation leveraging Godot's custom resources.
 - Created the pixel art assets in Aseprite to mimic a retro style similar to Gameboy games.

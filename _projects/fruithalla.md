@@ -16,10 +16,10 @@ screenshots: ["assets/project_assets/fruithalla/cover.png", "assets/project_asse
 play_url: "https://engmor.itch.io/fruithalla"
 ---
 
-### About the Project
+## About the Project
 Fruithalla is an intense wave-based third person shooter where you play as one of the ODI's last agents. Protect an ancient artifact from the onslaught of alien invaders using an arsenal of fruit-based weaponry.
 
-### Achievements
+## Achievements
 - Created a responsive, adjustible character controller with focus on clean architecture and separation using KCC.
 - Implemented an audio system with 3D sound-effects, adaptive music and sound-effect layers.
 - Participated in design discussions and collaborated with the rest of the bootcamp team.

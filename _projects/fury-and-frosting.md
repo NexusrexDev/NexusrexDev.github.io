@@ -17,10 +17,10 @@ play_url: "https://nexusrexdev.itch.io/fury-and-frosting"
 code_url: "https://github.com/NexusrexDev/Fury-and-Frosting"
 ---
 
-### About the Project
+## About the Project
 Fury and Frosting is a 2D auto-runner platformer where you play as Sir Crumbleton, a knight with a sweet tooth who became angry at the theft of his cookies, he couldn't stand still for too long lest he explodes.
 
-### Achievements
+## Achievements
 - Submitted the game as a submission for the **Gaming Academy 4.0 program** within the required timeframe.
 - Used Finite State Machines to create a flexible, clean character controller.
 - Designed the levels with balanced difficulty and stage mechanics, and reused said mechanics to create an engaging boss fight at the end of the game.

@@ -7,14 +7,14 @@ excerpt: "Turning the enemies from 'Enemy Design in Shmups' to a prototype with 
 
 Greetings everyone! It had clearly been a bit since the first blog post in here *(and I blame procrastination because that's what I do the best!)* but I've gladly got a prototype down using Godot!
 
-# Why Godot *(And no, it's not because of the entire Unity thing)*
+## Why Godot *(And no, it's not because of the entire Unity thing)*
 I used to use GameMaker: Studio in my earlier attempts at game development, and as enjoyable as it was, GMS2 happened to be paid which brought me to move to Unity, then followed by Godot.
 And while I didn't get to do anything serious with Godot beforehand, I enjoyed it for a few simple reasons!
 - **Lightweight:** I'm using Godot 3.5 alongside Visual Studio Code instead of the built-in editor, and the duo run like a breeze on my laptop.
 - **Pixel-perfect:** The 2D section's emphasis on (almost) pixel perfect units for positions reminded me of GameMaker's and felt right at home. *(I'll admit that Unity's unit system caught me off-guard and felt quite complicated back then, but that's a rant for another time.)*
 - **OOP...ish?:** As much as I'm not a fan of Godot's GDScript because of its lack of forced static typing *(although that I try to emphasize it in my code.)*, I enjoyed the fact that OOP is available, and it allowed me to get several things done quicker.
 
-# Actually prototyping!
+## Actually prototyping!
 Prototyping the game didn't take too long, several nodes allowed me to quicken up the development time and focus on the gameplay itself. *(Something such as the parallax scrolling, which was entirely built-in and needed to code besides setting the scrolling speeds.)*
 
 One fun tid-bit in Godot is **Custom Resources** which I've used to create *'pattern files'*, so instead of hard-coding them, a pattern file is basically an array of resources, and every element in said array would be an *'enemy resource'* that contains data such as the enemy type, position and extras.

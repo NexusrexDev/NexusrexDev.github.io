@@ -5,16 +5,16 @@ categories: analysis
 excerpt: "An attempt to analyze enemy designs from several shmup games and write them down in a detailed manner!"
 ---
 
-# A beginning
+## A beginning
 This post is mainly made as a form of guidance for myself after tackling several shmup games *(Ranging from simple jam entries in the spirit of simple shmups akin to Space Invaders and 1942 and more advanced shmups)* in attempt to understand how a basic enemy unit can be designed, and what cliches can be found in common between said games.
 
-# Let's get into it
+## Let's get into it
 An enemy can be divided into 3 phases:
 1. Intro
 2. Action
 3. Departure
 
-## Intro attributes
+### Intro attributes
 
 | Name | Description |
 | :-------------: | ------------- |
@@ -24,14 +24,14 @@ An enemy can be divided into 3 phases:
 | **Teleport** | The enemy has a teleportation animation before being instantiated/spawned in place of the animation. |
 {:.table}
 
-## Action attributes
+### Action attributes
 The action attributes are split into two types:
 1. Movement attributes
 2. Shooting attributes
 
 The types can be either simultaneous, or focused on one of the types.
 
-### Movement attributes
+#### Movement attributes
 
 | Name | Description |
 | :-------------: | ------------- |
@@ -44,7 +44,7 @@ The types can be either simultaneous, or focused on one of the types.
 | **Hovering** | The enemy moves around the scene slowly, usually used for bigger enemies or bosses to stop them from being completely stationary. <br> ![Hovering animation]({{ "/assets/blog_assets/enemy-design-shmups/movement_hover.gif" | relative_url }}) <sub>*The closest approximation to such a behavior with a small enemy*</sub> |
 {:.table}
 
-### Shooting attributes
+#### Shooting attributes
 
 | Name | Description |
 | :-------------: | ------------- |
@@ -57,7 +57,7 @@ The types can be either simultaneous, or focused on one of the types.
 | **Bomb <br><sub>(Special)</sub>** | The enemy triggers the shots like a bomb when killed, usually using a radial blast. |
 {:.table}
 
-## Departure attributes
+### Departure attributes
 
 | Name | Description |
 | :-------------: | ------------- |
@@ -66,7 +66,7 @@ The types can be either simultaneous, or focused on one of the types.
 | **Disappearing** | The enemy has another teleportation animation to leave the scene, which can be used as a way to reward the player for quickly defeating the enemy before disappearing. |
 {:.table}
 
-# References
+## References
 I was heavily inspired by Garret Bright’s [Build a Bad Guy Workshop article](https://www.gamedeveloper.com/design/build-a-bad-guy-workshop---designing-enemies-for-retro-games) and how he structured the article, definitely worth a read.
 I played:
 - [Twin Strike](https://www.lexaloffle.com/bbs/?tid=43453) *(pico8 game)* by Mikesta

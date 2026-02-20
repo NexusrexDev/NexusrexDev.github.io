@@ -6,19 +6,23 @@ layout: default
 
 <div class="project-pills">
     {% if page.release_date %}
-    <span class="project-pill project-pill--date"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <span class="pill-text">{{ page.release_date }}</span></span>
+    <span class="project-pill project-pill--date"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <span
+            class="pill-text">{{ page.release_date }}</span></span>
     {% endif %}
 
     {% if page.target %}
-    <span class="project-pill project-pill--target"><i class="fa-solid fa-building" aria-hidden="true"></i> <span class="pill-text">{{ page.target }}</span></span>
+    <span class="project-pill project-pill--target"><i class="fa-solid fa-building" aria-hidden="true"></i> <span
+            class="pill-text">{{ page.target }}</span></span>
     {% endif %}
 
     {% if page.role %}
-    <span class="project-pill project-pill--role"><i class="fa-solid fa-user" aria-hidden="true"></i> <span class="pill-text">{{ page.role }}</span></span>
+    <span class="project-pill project-pill--role"><i class="fa-solid fa-user" aria-hidden="true"></i> <span
+            class="pill-text">{{ page.role }}</span></span>
     {% endif %}
 
     {% if page.status %}
-    <span class="project-pill project-pill--status"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> <span class="pill-text">{{ page.status }}</span></span>
+    <span class="project-pill project-pill--status"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> <span
+            class="pill-text">{{ page.status }}</span></span>
     {% endif %}
 </div>
 
@@ -46,12 +50,13 @@ layout: default
 <div class="project-details">
     {% if page.screenshots and page.screenshots.size > 0 %}
     <div class="screenshots">
-        <h3>Screenshots</h3>
+        <h2>Screenshots</h2>
         <div class="carousel" data-carousel>
             <div class="carousel-track">
                 {% for screenshot in page.screenshots %}
                 <div class="carousel-slide">
-                    <img src="{{ screenshot | relative_url }}" alt="Screenshot {{ forloop.index }}" class="carousel-image">
+                    <img src="{{ screenshot | relative_url }}" alt="Screenshot {{ forloop.index }}"
+                        class="carousel-image">
                 </div>
                 {% endfor %}
             </div>
@@ -65,7 +70,8 @@ layout: default
 
             <div class="carousel-indicators">
                 {% for screenshot in page.screenshots %}
-                <button class="carousel-indicator" data-slide="{{ forloop.index0 }}" aria-label="Go to slide {{ forloop.index }}"></button>
+                <button class="carousel-indicator" data-slide="{{ forloop.index0 }}"
+                    aria-label="Go to slide {{ forloop.index }}"></button>
                 {% endfor %}
             </div>
         </div>
@@ -77,29 +83,29 @@ layout: default
     </div>
 
     {% if page.platforms or page.tech_tags %}
-        <h3>Project Info</h3>
-        <div class="project-info-grid">
-            {% if page.platforms %}
-            <div>
-                <strong>Platforms</strong>
-                <div class="platforms-pills">
-                    {% for platform in page.platforms %}
-                    <span class="skills-list-item">{{ platform }}</span>
-                    {% endfor %}
-                </div>
+    <h2>Project Info</h2>
+    <div class="project-info-grid">
+        {% if page.platforms %}
+        <div>
+            <strong>Platforms</strong>
+            <div class="platforms-pills">
+                {% for platform in page.platforms %}
+                <span class="skills-list-item">{{ platform }}</span>
+                {% endfor %}
             </div>
-            {% endif %}
-            {% if page.tech_tags %}
-            <div>
-                <strong>Technologies and Tools Used</strong>
-                <div class="tech-pills">
-                    {% for tech in page.tech_tags %}
-                    <span class="skills-list-item">{{ tech }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-            {% endif %}
         </div>
+        {% endif %}
+        {% if page.tech_tags %}
+        <div>
+            <strong>Technologies and Tools Used</strong>
+            <div class="tech-pills">
+                {% for tech in page.tech_tags %}
+                <span class="skills-list-item">{{ tech }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
     {% endif %}
 </div>
 <script src="{{ '/public/js/carousel.js' | relative_url }}"></script>
