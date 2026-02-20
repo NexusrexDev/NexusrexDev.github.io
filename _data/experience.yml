@@ -9,10 +9,18 @@
 # skills: array of skill groups
 
 work:
+  - role: Unity Developer
+    company: Genesis Creations
+    time: Feb 2026 - Present
+    location: Cairo - Egypt
   - role: Unity Developer Intern
     company: Genesis Creations
-    time: 2025 - Present
+    time: Jul 2025 - Feb 2026
     location: Cairo - Egypt
+    info:
+      - Learned the fundamentals of the Unity Engine and C#.
+      - Contributed in several of the company's projects, mainly targeting VR.
+      - Contributed to the development of Fruithalla, a wave-based third-person shooter game.
 
 education:
   - degree: Bachelor's Degree

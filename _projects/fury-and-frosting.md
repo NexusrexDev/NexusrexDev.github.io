@@ -6,7 +6,7 @@ title: "Fury and Frosting"
 release_date: "2024"
 target: "NexusrexDev (Personal)"
 pitch: "An auto-runner platformer where standing still for too long damages the player."
-tech_tags: ["Godot Engine", "C#", "Aseprite", "Ableton Live"]
+tech_tags: ["Godot Engine", "C#", "Aseprite", "Ableton"]
 platforms: ["Windows", "Linux"]
 role: "Solo Developer"
 status: "Released"
@@ -25,4 +25,4 @@ Fury and Frosting is a 2D auto-runner platformer where you play as Sir Crumbleto
 - Used Finite State Machines to create a flexible, clean character controller.
 - Designed the levels with balanced difficulty and stage mechanics, and reused said mechanics to create an engaging boss fight at the end of the game.
 - Created the pixel art assets using Aseprite.
-- Composed the soundtrack using Ableton Live and SNES soundfonts to create tunes reminiscent of the era.
+- Composed the soundtrack using Ableton and SNES soundfonts to create tunes reminiscent of the era.
