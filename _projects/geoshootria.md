@@ -4,6 +4,7 @@ layout: project
 # General information
 title: "Geoshootria"
 release_date: "2024"
+release_sort: "2024-04"
 target: "NexusrexDev (Personal)"
 pitch: "A retro 2D shoot 'em up."
 tech_tags: ["Godot Engine", "GDScript", "Aseprite", "Famitracker"]

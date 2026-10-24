@@ -4,6 +4,7 @@ layout: project
 # General information
 title: "NinjaCube: Finding Hatsune"
 release_date: "2018"
+release_sort: "2018-08"
 target: "NexusrexDev (Personal)"
 pitch: "A cutesy 2D action platformer inspired by retro classics."
 tech_tags: ["GameMaker: Studio", "GML"]

@@ -113,6 +113,11 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.entry-pitch {
+  font-weight: normal;
+  color: #4b5560;
+}
+
 .entry-organization,
 .entry-time {
   margin-bottom: 0.25rem;

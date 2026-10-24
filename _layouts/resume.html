@@ -63,13 +63,16 @@
 
     <section class="resume-section">
       <h2>Projects</h2>
-      {% assign projects = site.projects | sort: 'release_date' | reverse %}
+      {% assign projects = site.projects | sort: 'release_sort' | reverse %}
       {% for project in projects %}
       {% if project.resume_featured %}
       <article class="resume-entry">
         <div class="entry-heading">
           <div>
-            <h3>{{ project.title }}</h3>
+            <h3>
+              {{ project.title }}
+              {% if project.pitch %}<span class="entry-pitch"> · {{ project.pitch }}</span>{% endif %}
+            </h3>
             <p class="entry-links">
               {% if project.play_url %}<a href="{{ project.play_url }}">Play</a>{% endif %}
               {% if project.play_url and project.code_url %} · {% endif %}

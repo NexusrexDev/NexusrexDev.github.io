@@ -1,7 +1,7 @@
 <section id="projects" class="projects">
   <h2 class="section-title animate-item animate-item--fast">Projects</h2>
   <div class="projects-grid">
-    {% assign sorted_projects = site.projects | sort: 'release_date' | reverse %}
+    {% assign sorted_projects = site.projects | sort: 'release_sort' | reverse %}
     {% for project in sorted_projects %}
     <article class="project-card card card--project animate-item">
       <a href="{{ project.url | relative_url }}" class="project-link">

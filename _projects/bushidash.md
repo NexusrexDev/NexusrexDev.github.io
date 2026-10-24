@@ -4,6 +4,7 @@ layout: project
 # General information
 title: "Bushidash"
 release_date: "2025"
+release_sort: "2025-02"
 target: "NexusrexDev (Personal)"
 pitch: "An arcade game where dashing is the player's only way to attack and move."
 tech_tags: ["Godot Engine", "GDScript", "Aseprite", "Famitracker"]

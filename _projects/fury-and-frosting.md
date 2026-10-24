@@ -4,6 +4,7 @@ layout: project
 # General information
 title: "Fury and Frosting"
 release_date: "2024"
+release_sort: "2024-09"
 target: "NexusrexDev (Personal)"
 pitch: "An auto-runner platformer where standing still for too long damages the player."
 tech_tags: ["Godot Engine", "C#", "Aseprite", "Ableton"]

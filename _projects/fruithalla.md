@@ -4,6 +4,7 @@ layout: project
 # General information
 title: "Fruithalla"
 release_date: "2026"
+release_sort: "2026-02"
 target: "Genesis Creations (Bootcamp)"
 pitch: "A wave-based shooter where fruits are your only weapon against alien invaders."
 tech_tags: ["Unity Engine", "C#"]
