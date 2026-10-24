@@ -10,6 +10,7 @@ tech_tags: ["Unity Engine", "C#"]
 platforms: ["Windows"]
 role: "Unity Developer"
 status: "Released"
+resume_featured: true
 
 screenshots: ["assets/project_assets/fruithalla/cover.png", "assets/project_assets/fruithalla/screenshot1.png", "assets/project_assets/fruithalla/screenshot2.png", "assets/project_assets/fruithalla/screenshot3.png"]
 

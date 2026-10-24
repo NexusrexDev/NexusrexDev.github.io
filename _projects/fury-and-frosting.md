@@ -10,6 +10,7 @@ tech_tags: ["Godot Engine", "C#", "Aseprite", "Ableton"]
 platforms: ["Windows", "Linux"]
 role: "Solo Developer"
 status: "Released"
+resume_featured: true
 
 screenshots: ["assets/project_assets/furyandfrosting/cover.png", "assets/project_assets/furyandfrosting/screenshot1.png", "assets/project_assets/furyandfrosting/screenshot2.png"]
 

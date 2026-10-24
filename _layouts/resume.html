@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+{% assign about = site.data.about %}
+{% assign experience = site.data.experience %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ about.author_name }} - Resume</title>
+  <link rel="stylesheet" href="{{ '/public/css/resume.css' | relative_url }}">
+</head>
+<body>
+  <main class="resume">
+    <header class="resume-header">
+      <h1>{{ about.author_name }}</h1>
+      {% if page.show_title and about.title %}
+      <p class="resume-title">{{ about.title }}</p>
+      {% endif %}
+      {% assign email_link = site.data.links.professional | where: 'name', 'Email' | first %}
+      {% assign linkedin_link = site.data.links.technical | where: 'name', 'LinkedIn' | first %}
+      <address class="resume-contact">
+        {% if email_link %}<a href="mailto:{{ email_link.link }}">{{ email_link.link }}</a>{% endif %}
+        {% if linkedin_link %}<a href="{{ linkedin_link.link }}">LinkedIn</a>{% endif %}
+        <a href="{{ site.url }}">Portfolio</a>
+        {% if about.location %}<span>{{ about.location }}</span>{% endif %}
+      </address>
+    </header>
+
+    <section class="resume-section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        {% for group in experience.skills %}
+        <div class="skill-group">
+          <h3>{{ group.name }}</h3>
+          <p>{{ group.items | join: ', ' }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2>Experience</h2>
+      {% for job in experience.work %}
+      {% if job.resume_featured %}
+      <article class="resume-entry">
+        <div class="entry-heading">
+          <div>
+            <h3>{{ job.role }}</h3>
+            <p class="entry-organization">{{ job.company }}{% if job.location %} · {{ job.location }}{% endif %}</p>
+          </div>
+          <p class="entry-time">{{ job.time }}</p>
+        </div>
+        {% if job.info %}
+        <ul>
+          {% for item in job.info %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% endif %}
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2>Projects</h2>
+      {% assign projects = site.projects | sort: 'release_date' | reverse %}
+      {% for project in projects %}
+      {% if project.resume_featured %}
+      <article class="resume-entry">
+        <div class="entry-heading">
+          <div>
+            <h3>{{ project.title }}</h3>
+            <p class="entry-links">
+              {% if project.play_url %}<a href="{{ project.play_url }}">Play</a>{% endif %}
+              {% if project.play_url and project.code_url %} · {% endif %}
+              {% if project.code_url %}<a href="{{ project.code_url }}">Source</a>{% endif %}
+            </p>
+            <p class="entry-organization">
+              {{ project.role }}
+              {% unless project.target contains 'Personal' %} · {{ project.target }}{% endunless %}
+              · {{ project.tech_tags | join: ', ' }}
+            </p>
+          </div>
+          <p class="entry-time">{{ project.release_date }}</p>
+        </div>
+        {% if project.bullet_points %}
+        <ul>
+          {% for bullet in project.bullet_points %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </article>
+      {% endif %}
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+      {% for entry in experience.education %}
+      <article class="resume-entry certification-entry">
+        <div class="entry-heading">
+          <div>
+            <h3>{{ entry.degree }}</h3>
+            <p class="entry-organization">{{ entry.institution }}</p>
+            {% if entry.faculty or entry.program %}
+            <p>{{ entry.faculty }}{% if entry.faculty and entry.program %} · {% endif %}{{ entry.program }}</p>
+            {% endif %}
+          </div>
+          <p class="entry-time">{{ entry.time }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+
+    {% if experience.certifications %}
+    <section class="resume-section">
+      <h2>Certifications</h2>
+      {% for certification in experience.certifications %}
+      <article class="resume-entry certification-entry">
+        <div class="entry-heading">
+          <div>
+            <h3>{{ certification.name }}</h3>
+            <p class="entry-organization">{{ certification.issuer }}</p>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </main>
+</body>
+</html>

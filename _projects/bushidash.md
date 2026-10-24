@@ -10,6 +10,7 @@ tech_tags: ["Godot Engine", "GDScript", "Aseprite", "Famitracker"]
 platforms: ["Web"]
 role: "Solo Developer"
 status: "Released"
+resume_featured: true
 
 screenshots: ["assets/project_assets/bushidash/cover.png", "assets/project_assets/bushidash/gameplay.gif"]
 

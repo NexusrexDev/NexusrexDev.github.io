@@ -10,6 +10,7 @@ tech_tags: ["GameMaker: Studio", "GML"]
 platforms: ["Windows"]
 role: "Solo Developer"
 status: "Hiatus"
+resume_featured: true
 
 screenshots: ["assets/project_assets/ninjacube/mainmenu.gif", "assets/project_assets/ninjacube/level1.gif", "assets/project_assets/ninjacube/level2.gif"]
 

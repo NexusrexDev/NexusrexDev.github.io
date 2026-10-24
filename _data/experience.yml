@@ -4,6 +4,7 @@
 #   - company: text
 #   - time: text
 #   - location: text
+#   - resume_featured: boolean
 #   - info (optional): array of bullet points
 # education: array of education entries
 # skills: array of skill groups
@@ -13,10 +14,12 @@ work:
     company: Genesis Creations
     time: Feb 2026 - Present
     location: Cairo - Egypt
+    resume_featured: true
   - role: Unity Developer Intern
     company: Genesis Creations
     time: Jul 2025 - Feb 2026
     location: Cairo - Egypt
+    resume_featured: true
     info:
       - Learned the fundamentals of the Unity Engine and C#.
       - Contributed in several of the company's projects, mainly targeting VR.
@@ -51,3 +54,9 @@ skills:
       - Level Design
       - Game-feel Iteration
       - Game Music Composition
+
+certifications:
+  - name: Gaming Academy 4.0
+    issuer: SAIL for Change, AUB
+  - name: Java Programming
+    issuer: Information Technology Institute (ITI)

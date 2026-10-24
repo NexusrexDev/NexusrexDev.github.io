@@ -10,6 +10,7 @@ tech_tags: ["Godot Engine", "GDScript", "Aseprite", "Famitracker"]
 platforms: ["Web", "Windows", "Linux"]
 role: "Solo Developer"
 status: "Released"
+resume_featured: true
 
 screenshots: ["assets/project_assets/geoshootria/cover.gif", "assets/project_assets/geoshootria/screenshot1.png", "assets/project_assets/geoshootria/screenshot2.png"]
 
