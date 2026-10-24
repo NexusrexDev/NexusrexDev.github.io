@@ -15,13 +15,11 @@ screenshots: ["assets/project_assets/bushidash/cover.png", "assets/project_asset
 
 play_url: "https://nexusrexdev.itch.io/bushidash"
 code_url: "https://github.com/NexusrexDev/Bushidash"
+
+about: "A fast-paced arcade game where you control a samurai whose dash is both an attack and a movement ability. Chaining dashes builds combos, while mistiming one breaks the streak."
+bullet_points:
+  - "Designed the gameplay and enemies around dashing as the sole movement and attack mechanic."
+  - "Created the game's pixel-art assets in Aseprite."
+  - "Composed the soundtrack in Famitracker using the Hirajoshi scale."
+  - "Delivered the web build in four days as a solo developer."
 ---
-
-## About the Project
-Bushidash is a fast-paced arcade game where you control a samurai in a zen moment disrupted by aliens teleporting in. The game's main mechanic is dashing, acting both as attacking and movement and encourages players to rack combos up and chain dashes to create a faster playstyle, but mistiming a dash will end up breaking the entire streak!
-
-## Achievements
-- Limited the mechanics to a single choice for an arcade-y, yet fun gameplay experience and designed the enemies around it.
-- Created the assets in Aseprite for a clear, bold and easily readable artstyle.
-- Composed the soundtrack using Famitracker and experimented with the Hirajoshi scale to create a gameplay theme influenced by Asian music.
-- Delivered the game in 4 days in a web build.

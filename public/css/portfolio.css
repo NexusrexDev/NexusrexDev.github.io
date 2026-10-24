@@ -308,6 +308,10 @@
   margin-bottom: 0;
 }
 
+.hero-working-at + .hero-working-at {
+  margin-top: 0.35rem;
+}
+
 .hero-working-at i {
   font-size: 0.85rem;
   opacity: 0.85;
@@ -573,6 +577,7 @@
   opacity: 1;
   transform: scale(1.05);
   text-decoration: none;
+  color: #fff;
 }
 
 .project-action-button i {
@@ -581,6 +586,10 @@
 }
 
 .project-action-button:hover i {
+  color: #fff;
+}
+
+.project-action-button:hover span {
   color: #fff;
 }
 
@@ -783,6 +792,68 @@
 
   .experience-meta {
     align-items: flex-end;
+  }
+}
+
+/* ============================================================
+   EDUCATION SECTION
+   ============================================================ */
+.education {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.education-institution {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-text-bright);
+}
+
+.education-degree,
+.education-details {
+  margin: 0.1rem 0 0;
+  font-size: 0.95rem;
+  color: var(--color-text-mid);
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.education-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1;
+  color: var(--color-tag-text);
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.education-pill-text {
+  white-space: nowrap;
+  margin-left: 0.25rem;
+}
+
+@media (min-width: 48em) {
+  .education-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .education-main {
+    flex: 1;
   }
 }
 

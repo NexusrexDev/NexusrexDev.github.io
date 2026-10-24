@@ -24,7 +24,9 @@ work:
 
 education:
   - degree: Bachelor's Degree
-    location: Helwan University - Faculty of Computers and Artificial Intelligence
+    institution: Helwan University
+    faculty: Faculty of Computers and Artificial Intelligence
+    program: Software Engineering Program
     time: 2021 - 2025
   
 skills:
@@ -43,5 +45,9 @@ skills:
       - Aseprite
       - Ableton
       - Famitracker
-
-
+  - name: Disciplines
+    items:
+      - Gameplay Programming
+      - Level Design
+      - Game-feel Iteration
+      - Game Music Composition

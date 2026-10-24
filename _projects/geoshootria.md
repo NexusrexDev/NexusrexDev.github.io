@@ -15,13 +15,11 @@ screenshots: ["assets/project_assets/geoshootria/cover.gif", "assets/project_ass
 
 play_url: "https://nexusrexdev.itch.io/geoshootria"
 code_url: "https://github.com/NexusrexDev/Geoshootria"
+
+about: "A fast-paced 2D shoot 'em up influenced by genre classics while remaining accessible to new players."
+bullet_points:
+  - "Designed two stages with increasing difficulty and a challenging boss at the end of each stage."
+  - "Created a flexible spawner system using Godot custom resources for easier level-pattern authoring."
+  - "Created Game Boy-inspired pixel-art assets in Aseprite."
+  - "Composed an authentic 8-bit chiptune soundtrack in Famitracker."
 ---
-
-## About the Project
-Geoshootria is a fast-paced 2D shoot 'em up influenced by several classics from the genre, while keeping it accessible enough to new players.
-
-## Achievements
-- Designed 2 stages with increasing difficulty and a challenging boss at the end of each stage.
-- Created a flexible spawner system for easier level pattern creation leveraging Godot's custom resources.
-- Created the pixel art assets in Aseprite to mimic a retro style similar to Gameboy games.
-- Composed the game's soundtrack using Famitracker to approach an authentic, 8-bit chiptune style.

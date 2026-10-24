@@ -1,0 +1,33 @@
+<section class="education" id="education">
+  <h2 class="section-title animate-item animate-item--fast">Education</h2>
+
+  {% for entry in site.data.experience.education %}
+  <article class="education-item card card--pad animate-item">
+    <div class="education-header">
+      <div class="education-main">
+        <h3 class="education-institution">{{ entry.institution }}</h3>
+        <p class="education-degree">{{ entry.degree }}</p>
+        {% if entry.faculty or entry.program %}
+        <p class="education-details">
+          {% if entry.faculty %}{{ entry.faculty }}{% endif %}
+          {% if entry.faculty and entry.program %} · {% endif %}
+          {% if entry.program %}{{ entry.program }}{% endif %}
+        </p>
+        {% endif %}
+      </div>
+      {% if entry.time %}
+      <div class="education-meta">
+        <span class="education-pill">
+          <svg class="experience-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"
+            focusable="false">
+            <path fill="currentColor"
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-400c8.8 0 16 7.2 16 16v112h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V128c0-8.8 7.2-16 16-16z" />
+          </svg>
+          <span class="education-pill-text">{{ entry.time }}</span>
+        </span>
+      </div>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</section>

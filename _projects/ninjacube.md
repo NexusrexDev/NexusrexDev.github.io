@@ -14,12 +14,11 @@ status: "Hiatus"
 screenshots: ["assets/project_assets/ninjacube/mainmenu.gif", "assets/project_assets/ninjacube/level1.gif", "assets/project_assets/ninjacube/level2.gif"]
 
 play_url: "https://gamejolt.com/games/ninjacube-finding-hatsune/148444"
+
+about: "A cutesy 2D action platformer inspired by retro classics such as Mega Man and Castlevania, featuring slashing, jumping, shooting, enemies, and bosses."
+bullet_points:
+  - "Designed three levels with varied enemy types, stage mechanics, and bosses."
+  - "Created the pixel-art assets while maintaining a soft, cutesy visual style."
+  - "Showcased the game at Run Double Jump 2018 and Insomnia Gaming Festival 2018."
+  - "Managed a booth, conducted live playtesting, and used player feedback to guide polish."
 ---
-
-## About the Project
-NinjaCube: Finding Hatsune is a 2D action platformer inspired by the retro classics such as Megaman and Castlevania, play as NinjaCube and help him rescue his beloved Hatsune by slashing, jumping and shooting through enemies and bosses.
-
-## Achievements
-- Designed 3 levels with various enemy types, stage mechanics and bosses.
-- Created the pixel art assets while keeping a soft, cutesy style.
-- Showcased the game at **Run Double Jump** *at the Information Technology Institute (2018)* and **Insomnia Gaming Festival** *(2018)*, managed a booth to conduct live playtesting and gathered feedback to implement tweaks and polish. 

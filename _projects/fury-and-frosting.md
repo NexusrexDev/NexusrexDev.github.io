@@ -15,14 +15,12 @@ screenshots: ["assets/project_assets/furyandfrosting/cover.png", "assets/project
 
 play_url: "https://nexusrexdev.itch.io/fury-and-frosting"
 code_url: "https://github.com/NexusrexDev/Fury-and-Frosting"
+
+about: "A 2D auto-runner platformer starring Sir Crumbleton, a knight who must keep moving to avoid exploding after his cookies are stolen."
+bullet_points:
+  - "Developed the game as a submission for the Gaming Academy 4.0 program."
+  - "Used a finite state machine to create a flexible character controller."
+  - "Designed levels around escalating mechanics and reused them for the final boss fight."
+  - "Created the pixel-art assets in Aseprite."
+  - "Composed an SNES-inspired soundtrack in Ableton using appropriate soundfonts."
 ---
-
-## About the Project
-Fury and Frosting is a 2D auto-runner platformer where you play as Sir Crumbleton, a knight with a sweet tooth who became angry at the theft of his cookies, he couldn't stand still for too long lest he explodes.
-
-## Achievements
-- Submitted the game as a submission for the **Gaming Academy 4.0 program** within the required timeframe.
-- Used Finite State Machines to create a flexible, clean character controller.
-- Designed the levels with balanced difficulty and stage mechanics, and reused said mechanics to create an engaging boss fight at the end of the game.
-- Created the pixel art assets using Aseprite.
-- Composed the soundtrack using Ableton and SNES soundfonts to create tunes reminiscent of the era.

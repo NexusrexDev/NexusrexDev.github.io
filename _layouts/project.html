@@ -78,9 +78,23 @@ layout: default
     </div>
     {% endif %}
 
+    {% if page.about %}
     <div class="project-content">
-        {{ content }}
+        <h2>About the Project</h2>
+        <p>{{ page.about }}</p>
     </div>
+    {% endif %}
+
+    {% if page.bullet_points %}
+    <div class="project-content">
+        <h2>Highlights</h2>
+        <ul>
+            {% for bullet in page.bullet_points %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
 
     {% if page.platforms or page.tech_tags %}
     <h2>Project Info</h2>
