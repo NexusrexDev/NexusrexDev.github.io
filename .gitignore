@@ -4,3 +4,10 @@ _site
 .jekyll-metadata
 vendor
 *.lock
+
+# Python environments and generated files
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
