@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import functools
 import http.server
+import os
 import shutil
 import subprocess
 import threading
@@ -13,6 +14,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = ROOT / "assets" / "Ahmed Ibrahim Abutahoun Resume.pdf"
+
+
+def configure_native_runtime() -> list[object]:
+    if os.name != "nt":
+        return []
+
+    configured = os.environ.get("WEASYPRINT_DLL_DIR")
+    candidates = [
+        Path(configured) if configured else None,
+        Path(r"C:\msys64\ucrt64\bin"),
+        Path(r"C:\msys64\mingw64\bin"),
+        Path(r"C:\Program Files\GTK3-Runtime Win64\bin"),
+    ]
+    handles = []
+    for candidate in candidates:
+        if candidate and candidate.is_dir():
+            os.environ["PATH"] = str(candidate) + os.pathsep + os.environ["PATH"]
+            handles.append(os.add_dll_directory(str(candidate)))
+    return handles
 
 
 def build_site() -> None:
@@ -41,6 +61,7 @@ def serve_site(site_dir: Path) -> tuple[http.server.ThreadingHTTPServer, threadi
 
 
 def write_pdf(output: Path) -> None:
+    dll_handles = configure_native_runtime()
     try:
         from weasyprint import HTML
     except ImportError as error:
@@ -69,6 +90,8 @@ def write_pdf(output: Path) -> None:
         server.shutdown()
         thread.join()
         server.server_close()
+        for handle in dll_handles:
+            handle.close()
 
 
 def main() -> None:
