@@ -55,8 +55,17 @@ layout: default
             <div class="carousel-track">
                 {% for screenshot in page.screenshots %}
                 <div class="carousel-slide">
+                    {% assign media_extension = screenshot | split: "." | last | downcase %}
+                    {% if media_extension == "mp4" or media_extension == "webm" or media_extension == "ogg" %}
+                    <video controls preload="metadata" class="carousel-image carousel-video"
+                        aria-label="Project video {{ forloop.index }}">
+                        <source src="{{ screenshot | relative_url }}" type="video/{{ media_extension }}">
+                        Your browser does not support embedded videos.
+                    </video>
+                    {% else %}
                     <img src="{{ screenshot | relative_url }}" alt="Screenshot {{ forloop.index }}"
                         class="carousel-image">
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>

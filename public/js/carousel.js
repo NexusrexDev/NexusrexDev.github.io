@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = carousel.querySelector('.carousel-prev');
     const nextBtn = carousel.querySelector('.carousel-next');
     const indicators = Array.from(carousel.querySelectorAll('.carousel-indicator'));
+    const videos = Array.from(carousel.querySelectorAll('.carousel-video'));
 
     if (!track || slides.length === 0) return;
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const offset = -index * 100;
       track.style.transform = `translateX(${offset}%)`;
       indicators.forEach((btn, i) => btn.classList.toggle('active', i === index));
+      videos.forEach((video) => video.pause());
     };
 
     // Hook up buttons

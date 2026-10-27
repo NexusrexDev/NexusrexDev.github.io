@@ -658,6 +658,10 @@
   box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
 }
 
+.carousel-video {
+  background: #000;
+}
+
 .carousel-btn {
   position: absolute;
   top: 50%;
